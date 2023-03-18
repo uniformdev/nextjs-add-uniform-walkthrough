@@ -1,5 +1,5 @@
 {
-  "name": "@uniformdev/context-edge-netlify-example",
+  "name": "@uniformdev/barebones-example",
   "private": true,
   "scripts": {
     "start": "next start",
