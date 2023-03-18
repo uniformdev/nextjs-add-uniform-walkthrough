@@ -1,3 +1,5 @@
+import { ToggleEmbeddedContextDevTools } from "@uniformdev/context-devtools";
+
 const Footer = () => {
   return (
     <footer className="bg-white">
@@ -8,6 +10,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      <ToggleEmbeddedContextDevTools />
     </footer>
   );
 };
