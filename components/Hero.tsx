@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { registerUniformComponent } from "@uniformdev/canvas-react";
+
 import { BaseHeroData } from "../lib/models";
 import Splitter from "./Splitter";
 
@@ -45,3 +47,8 @@ export const Hero: React.FC<BaseHeroData> = ({
     </>
   );
 };
+
+registerUniformComponent({
+  type: "hero",
+  component: Hero,
+});
