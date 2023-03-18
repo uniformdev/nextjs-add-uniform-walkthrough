@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import NavMenu from "./NavMenu";
 import Logo from "./Logo";
-import { useUniformContext } from "@uniformdev/context-react";
 
 const HamburgerIcon = () => (
   <svg
@@ -30,7 +29,6 @@ const LockIcon = () => (
 const Nav = () => {
   const [submenuVisible, setSubmenuVisible] = useState(false);
   const [isScrolled, setScrolled] = useState(false);
-  const { context } = useUniformContext();
   const router = useRouter();
 
   useEffect(() => {
@@ -86,7 +84,6 @@ const Nav = () => {
             isScrolled={isScrolled}
             onClick={async () => {
               setSubmenuVisible(false);
-              await context.forget(true);
               document.cookie =
                 "unfrmconf_registered=; Path=/; samesite=lax; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
             }}
