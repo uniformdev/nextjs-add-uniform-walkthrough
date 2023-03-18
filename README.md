@@ -1,6 +1,6 @@
-# Example for Netlify Edge Functions
+# UniformConf without Uniform
 
-This is an example supporting [this tutorial](https://docs.uniform.app/context/reference/netlify).
+This is a baseline app that is used for a tutorial on how to add Uniform to an existing Next.js project.
 
 ## Getting Started
 
