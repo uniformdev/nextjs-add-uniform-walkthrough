@@ -5,6 +5,21 @@ const indexPage: Page = {
   slug: "/",
   components: [
     {
+      type: ComponentType.Hero,
+      title: "Welcome, Stranger!",
+      buttonLinkSlug: "/developers",
+      buttonText: "Click here",
+      description:
+        "<p>This is default content shown to every visitor. </p><p>Trigger campaign-based personalization <a href='/?utm_campaign=launch'>now</a>!</p>",
+      image:
+        "https://images.ctfassets.net/qefyoudbvm9s/1SvhzHGTcZUWO0J92wzBWq/868898caff791fa28b83f3108ff26b91/default.svg",
+      enrichments: {
+        cat: "1",
+        key: "dev",
+        str: 50,
+      },
+    },
+    {
       type: ComponentType.RegistrationForm,
       buttonText: "Complete Registration",
       heading: "Register Now!",
