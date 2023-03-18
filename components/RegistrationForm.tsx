@@ -1,5 +1,3 @@
-import { useUniformContext } from "@uniformdev/context-react";
-import { parse } from "cookie";
 import React from "react";
 import { useState } from "react";
 import { RegistrationFormData } from "../lib/models";
@@ -12,13 +10,8 @@ export const RegisterForm: React.FC<RegistrationFormData> = (fields) => {
       : false
   );
 
-  const { context } = useUniformContext();
-
   const onRegister = () => {
     document.cookie = "unfrmconf_registered=true; path=/; samesite=lax";
-    context.update({
-      cookies: parse(document.cookie),
-    });
     setRegistered(true);
   };
 

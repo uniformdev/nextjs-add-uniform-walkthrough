@@ -1,4 +1,3 @@
-import { getEnrichmentVectorKey } from "@uniformdev/context";
 import { ComponentType, Page } from "../../lib/models";
 
 const indexPage: Page = {

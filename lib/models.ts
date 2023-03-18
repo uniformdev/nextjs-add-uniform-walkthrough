@@ -1,15 +1,9 @@
-import { EnrichmentData, PersonalizedVariant } from "@uniformdev/context";
-
 export enum ComponentType {
-  PersonalizedHero = "personalizedhero",
   RegistrationForm = "registrationform",
   Hero = "hero",
 }
 
-export type PageComponentType =
-  | HeroData
-  | PersonalizedHeroData
-  | RegistrationFormData;
+export type PageComponentType = HeroData | RegistrationFormData;
 
 export type BaseHeroData = {
   /** Title */
@@ -27,13 +21,7 @@ export type BaseHeroData = {
   /** Button Link Slug */
   buttonLinkSlug: string;
 
-  enrichments?: EnrichmentData;
-};
-
-export type PersonalizedHeroData = {
-  type: ComponentType.PersonalizedHero;
-
-  variations: (BaseHeroData & PersonalizedVariant)[];
+  enrichments?: any;
 };
 
 export type RegistrationFormData = {

@@ -1,12 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Track } from "@uniformdev/context-react";
 import { BaseHeroData } from "../lib/models";
 import Splitter from "./Splitter";
-import {
-  registerUniformComponent,
-  ComponentProps,
-} from "@uniformdev/canvas-react";
+import { registerUniformComponent } from "@uniformdev/canvas-react";
 
 export const Hero: React.FC<BaseHeroData> = ({
   title,
@@ -14,10 +10,9 @@ export const Hero: React.FC<BaseHeroData> = ({
   buttonText,
   image,
   buttonLinkSlug,
-  enrichments,
 }) => {
   return (
-    <Track behavior={enrichments}>
+    <>
       <div className="pt-24">
         <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
           <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left min-h-500">
@@ -48,7 +43,7 @@ export const Hero: React.FC<BaseHeroData> = ({
         </div>
       </div>
       <Splitter />
-    </Track>
+    </>
   );
 };
 

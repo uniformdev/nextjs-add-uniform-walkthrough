@@ -10,9 +10,11 @@ const Home: NextPage<PageProps> = (props: PageProps) => {
 export const getStaticProps: GetStaticProps<any> = async (context) => {
   const { params } = context;
   const { slug } = params || {};
-  const properSlug = slug ?? "/";
 
-  const composition = await getCompositionBySlug(properSlug as string, context);
+  let composition;
+  if (!slug) {
+    composition = await getCompositionBySlug("/", context);
+  }
 
   return {
     props: {
