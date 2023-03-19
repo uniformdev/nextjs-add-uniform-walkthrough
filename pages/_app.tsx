@@ -12,7 +12,7 @@ const clientContext = createUniformContext();
 function MyApp({ Component, pageProps }: UniformAppProps) {
   return (
     <UniformContext context={clientContext}
-    outputType={process.env.NODE_ENV === "development" ? "standard" : "standard"}>
+    outputType={process.env.NODE_ENV === "development" ? "standard" : "edge"}>
       <Navbar />
       <Component {...pageProps} />
       <Footer />

@@ -13,7 +13,7 @@ const links: NavigationLink[] = [
   { id: "developers", text: "For Developers", href: "/developers" },
   { id: "marketers", text: "For Marketers", href: "/marketers" },
   { id: "registration", text: "Registration", href: "/registration" },
-  { id: "campaign", text: "Campaign", href: "/?utm_campaign=unfrmconf" },
+  { id: "campaign", text: "Campaign", href: "/?utm_campaign=launch" },
 ];
 
 const NavMenu = () => {

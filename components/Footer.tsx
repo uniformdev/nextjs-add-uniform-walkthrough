@@ -10,7 +10,9 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <ToggleEmbeddedContextDevTools />
+      {process.env.NODE_ENV === "development" ? (
+        <ToggleEmbeddedContextDevTools />
+      ) : null}
     </footer>
   );
 };
