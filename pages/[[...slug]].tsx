@@ -6,6 +6,7 @@ import {
   CANVAS_DRAFT_STATE,
   CANVAS_PUBLISHED_STATE,
 } from "@uniformdev/canvas";
+import runEnhancers from "lib/uniform/enhancers";
 
 const Home: NextPage<PageProps> = (props: PageProps) => {
   return <ComponentPage {...props} />;
@@ -30,6 +31,8 @@ export const getStaticProps: GetStaticProps<any> = async (context) => {
       slug: "/",
       state: getState(context.preview),
     });
+
+    await runEnhancers(composition, context);
     pageComposition = composition;
   }
 

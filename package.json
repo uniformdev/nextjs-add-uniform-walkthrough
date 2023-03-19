@@ -17,6 +17,7 @@
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^2.0.3",
     "@uniformdev/canvas": "18.22.0",
+    "@uniformdev/canvas-contentful": "^18.22.0",
     "@uniformdev/canvas-next": "18.22.0",
     "@uniformdev/canvas-react": "18.22.0",
     "@uniformdev/context": "18.22.0",
@@ -24,6 +25,7 @@
     "@uniformdev/context-edge-netlify": "18.22.0",
     "@uniformdev/context-next": "18.22.0",
     "@uniformdev/context-react": "18.22.0",
+    "contentful": "^9.3.5",
     "cookie": "^0.5.0",
     "next": "^13.2.4",
     "react": "^18.2.0",

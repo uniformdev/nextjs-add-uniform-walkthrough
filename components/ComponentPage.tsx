@@ -11,9 +11,15 @@ import componentMapping from "./componentMapping";
 export type PageProps = { page: Page; composition: RootComponentInstance };
 
 export const ComponentPage = ({ page, composition }: PageProps) => {
+  const enhancer = createUniformApiEnhancer({
+    apiUrl: "/api/preview",
+  });
   return (
     <>
-      <UniformComposition data={composition} />
+      <UniformComposition
+        data={composition}
+        contextualEditingEnhancer={enhancer}
+      />
       {page?.components &&
         page.components.map((component, index) =>
           createElement(componentMapping[component.type] ?? (() => null), {
