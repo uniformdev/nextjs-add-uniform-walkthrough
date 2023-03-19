@@ -3,7 +3,7 @@ export enum ComponentType {
   Hero = "hero",
 }
 
-export type PageComponentType = HeroData | RegistrationFormData;
+export type PageComponentType = any;
 
 export type BaseHeroData = {
   /** Title */
@@ -22,6 +22,22 @@ export type BaseHeroData = {
   buttonLinkSlug: string;
 
   enrichments?: any;
+
+  content: {
+    title: string;
+
+    /** Description */
+    description: string;
+
+    /** Button Text */
+    buttonText: string;
+
+    /** image */
+    image: string | null;
+
+    /** Button Link Slug */
+    buttonLinkSlug: string;
+  };
 };
 
 export type RegistrationFormData = {

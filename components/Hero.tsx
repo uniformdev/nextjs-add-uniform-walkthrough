@@ -5,13 +5,9 @@ import { registerUniformComponent } from "@uniformdev/canvas-react";
 import { BaseHeroData } from "../lib/models";
 import Splitter from "./Splitter";
 
-export const Hero: React.FC<BaseHeroData> = ({
-  title,
-  description,
-  buttonText,
-  image,
-  buttonLinkSlug,
-}) => {
+export const Hero: React.FC<BaseHeroData> = ({ content }) => {
+  const { title, description, buttonText, image, buttonLinkSlug } =
+    content || {};
   return (
     <>
       <div className="pt-24">
